@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Maths Operation</h2>
+    <label for="1stnum">Enter The First Number</label>
+    <input type="text" id="1num">
+    <br>
+    <label for="2ndnum">Enter The Second Number</label>
+    <input type="text" id="2num">
+    <button onclick="sum()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <h4 id="Ans"></h4>
+    <script>
+        function sum(){
+            let takenum1 = parseInt(document.getElementById('1num').value);
+            let takenum2 = parseInt(document.getElementById('2num').value);
+            let add = takenum1 + takenum2
+            document.getElementById('Ans').innerText = `Answer is ${add}`
+        }
+        function sub(){
+            let takenum1 = parseInt(document.getElementById('1num').value);
+            let takenum2 = parseInt(document.getElementById('2num').value);
+            let add = takenum1 - takenum2
+            document.getElementById('Ans').innerText = `Answer is ${add}`
+        }
+        function mul(){
+            let takenum1 = parseInt(document.getElementById('1num').value);
+            let takenum2 = parseInt(document.getElementById('2num').value);
+            let add = takenum1 * takenum2
+            document.getElementById('Ans').innerText = `Answer is ${add}`
+        }
+        function div(){
+            let takenum1 = parseInt(document.getElementById('1num').value);
+            let takenum2 = parseInt(document.getElementById('2num').value);
+            let add = takenum1 / takenum2
+            document.getElementById('Ans').innerText = `Answer is ${add}`
+        }
+
+    </script>
+</body>
+</html>

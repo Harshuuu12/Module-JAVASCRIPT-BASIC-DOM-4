@@ -1,0 +1,36 @@
+<!-- Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        const palindromes = [];
+        while (count < 3) {
+            const number = prompt("Enter a number:");
+            
+            if (!isNaN(number)) {
+                const numberStr = String(number);
+                const reversedNumberStr = numberStr.split('').reverse().join('');
+                
+                if (numberStr === reversedNumberStr) {
+                    console.log(number + " is a palindrome!");
+                    palindromes.push(Number(number));
+                } else {
+                    console.log(number + " is not a palindrome.");
+                }
+                count++;
+            } else {
+                console.log("Please enter a valid number.");
+            }
+        }
+
+        console.log("Palindromic numbers entered:", palindromes);
+
+    </script>
+</body>
+</html>

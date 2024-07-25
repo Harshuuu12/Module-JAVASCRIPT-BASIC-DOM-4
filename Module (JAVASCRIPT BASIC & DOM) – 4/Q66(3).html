@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Marksheet for Information Technology</h1>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <td>Marks Obtained</th>
+        </tr>
+        <tr>
+            <th>C Language</th>
+            <td><input type="text" id="CLanguage"></th>
+        </tr>
+        <tr>
+            <th >C++ Language</th>
+            <td><input type="text" id="C++Language"></th>
+        </tr>
+        <tr>
+            <th >Database</th>
+            <td><input type="text" id="Database"></th>
+        </tr>
+        <tr>
+            <th >HTML</th>
+            <td><input type="text" id="html"></th>
+        </tr>
+        <tr>
+            <th >CSS</th>
+            <td><input type="text" id="css"></th>
+        </tr>
+        <tr>
+            <th>PHP</th>
+            <td><input type="text" id="php"></th>
+        </tr>
+        <tr>
+            <th>Core Java</th>
+            <td><input type="text" id="corejava"></th>
+        </tr>
+    </table>
+    <button onclick="getresult()">Result</button>
+    <h4 id="Result"></h4>
+    <h4 id="percentage"></h4>
+    <script>
+        function getresult(){
+            let CLanguage = parseInt(document.getElementById("CLanguage").value);
+            let CplusLanguage = parseInt(document.getElementById("C++Language").value);
+            let Database = parseInt(document.getElementById("Database").value);
+            let html = parseInt(document.getElementById("html").value);
+            let css = parseInt(document.getElementById("css").value);
+            let php = parseInt(document.getElementById("php").value);
+            let corejava = parseInt(document.getElementById("corejava").value);
+            let Result = CLanguage + CplusLanguage + Database + html + css + php + corejava;
+            let percentage = parseFloat(Result / 700 * 100)
+            document.getElementById('Result').innerText = `Total Marks = ${Result}`
+            document.getElementById('percentage').innerText = `Precentage = ${percentage}`
+
+
+        }
+    </script>
+
+</body>
+</html>

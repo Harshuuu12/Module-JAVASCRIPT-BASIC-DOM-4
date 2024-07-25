@@ -1,0 +1,32 @@
+<!-- Q.29 Write to show
+    ii. Vowel or Consonant using switch case in JS?  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const char = 'a';      
+        const lowerChar = char.toLowerCase();
+        let result;
+
+        switch (lowerChar) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            result = 'Vowel';
+            break;
+        default:
+            result = 'Consonant';
+        }
+
+        console.log(`${char} is a ${result}`);
+
+    </script>
+</body>
+</html>

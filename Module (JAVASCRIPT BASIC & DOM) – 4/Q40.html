@@ -1,0 +1,30 @@
+<!-- Q.40 Write a JavaScript Program to display the current day and time in the following format. Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const now = new Date();
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const dayOfWeek = daysOfWeek[now.getDay()];
+        let hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+
+        const period = hour >= 12 ? "PM" : "AM";
+        hour = hour % 12 || 12; 
+
+        hour = hour < 10 ? "0" + hour : hour;
+        const formattedMinute = minute < 10 ? "0" + minute : minute;
+        const formattedSecond = second < 10 ? "0" + second : second;
+
+        console.log("Today is " + dayOfWeek + ". Current Time is " + hour + " " + period + ": " + formattedMinute + " : " + formattedSecond);
+
+    </script>
+</body>
+</html>

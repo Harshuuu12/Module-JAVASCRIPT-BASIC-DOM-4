@@ -1,0 +1,24 @@
+<!-- Q.33 Write to print Fibonacci series up to given numbers?  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = (prompt("Enter a number: "));
+        let a = 0, b = 1;
+
+        console.log("Fibonacci series up to " + n + " is:");
+        for (let i = 0; i <= n; i++) {
+            console.log(a);
+            let temp = a;
+            a = b;
+            b = temp + b;
+        }
+
+    </script>
+</body>
+</html>
